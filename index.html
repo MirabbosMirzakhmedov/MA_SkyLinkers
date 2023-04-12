@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SkyLinkers</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+        <!-- CSS files -->
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <!--header part-->
+        <header>
+            <div id="sticky-header" class="menu-area transparent-header">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="menu-wrap">
+                                <nav class="menu-nav">
+                                    <div class="logo"><a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a></div>
+                                    <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                        <ul class="navigation">
+                                        </ul>
+                                    </div>
+                                    <div class="header-action d-none d-md-block">
+                                        <ul>
+                                            <li class="country"><a href="#">EUR<img src="assets/img/icon/united-states.png" alt=""></a></li>
+                                            <li class="header-btn"><a href="#" class="btn">Log In</a></li>
+                                            <li class="header-btn sign-in"><a href="#" class="btn">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--main part -->
+        <main>
+            <!-- background part -->
+            <div class="slider-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-10">
+                            <div class="slider-content">
+                                <h2 class="title">Fly with ease, book with confidence</h2>
+                                <p>Our mission is to provide a stress-free and transparent flight booking experience, empowering travelers to fly with ease and confidence.</p>
+                                <a href="#" class="btn">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- booking-area -->
+            <div class="booking-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="booking-wrap">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="bOOKing-tab" data-bs-toggle="tab" data-bs-target="#bOOKing-tab-pane" type="button"
+                                            role="tab" aria-controls="bOOKing-tab-pane" aria-selected="true"><i class="flaticon-flight"></i>Flight</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="check-tab" data-bs-toggle="tab" data-bs-target="#check-tab-pane" type="button"
+                                            role="tab" aria-controls="check-tab-pane" aria-selected="false"><i class="flaticon-tick"></i>Manage booking</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- FLIGHTS TAB -->
+                                    <div class="tab-pane fade show active" id="bOOKing-tab-pane" role="tabpanel" aria-labelledby="bOOKing-tab" tabindex="0">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="tab-content-wrap">
+                                                    <form action="#" class="booking-form">
+                                                        <ul>
+                                                            <!-- FROM  -->
+                                                            <li>
+                                                                <div class="form-grp">
+                                                                    <input type="text" placeholder="From">
+                                                                </div>
+                                                            </li>
+
+                                                            <!--TO-->
+                                                            <li>
+                                                                <div class="form-grp">
+                                                                    <input type="text" placeholder="To">
+                                                                    <button class="exchange-icon"><i class="flaticon-exchange-1"></i></button>
+                                                                </div>
+                                                            </li>
+
+                                                            <!-- Trip type-->
+                                                            <li>
+                                                                <div class="form-grp select">
+                                                                    <label for="shortBy">Trip</label>
+                                                                    <select id="shortBy" name="select" class="form-select" aria-label="Default select example">
+                                                                        <option value="">Round trip</option>
+                                                                        <option>One way</option>
+                                                                        <option>Multi city</option>
+                                                                    </select>
+                                                                </div>
+                                                            </li>
+
+                                                            <!-- departure & return -->
+                                                            <li>
+                                                                <div class="form-grp date">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <label for="shortBy">Departure</label>
+                                                                            <input type="text" class="date" placeholder="Select Date">
+                                                                        </li>
+                                                                        <li>
+                                                                            <label for="shortBy">Return</label>
+                                                                            <input type="text" class="date" placeholder="Select Date">
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+
+                                                            <!-- passengers -->
+                                                            <li>
+                                                                <div class="form-grp select">
+                                                                    <label for="shortBy">Passengers</label>
+                                                                    <select id="short" name="select" class="form-select" aria-label="Default select example">
+                                                                        <option value="">1</option>
+                                                                        <option>2</option>
+                                                                        <option>3</option>
+                                                                        <option>4</option>
+                                                                        <option>5</option>
+                                                                        <option>6</option>
+                                                                        <option>7</option>
+                                                                        <option>8</option>
+                                                                        <option>9</option>
+                                                                    </select>
+                                                                </div>
+                                                            </li>
+
+                                                            <!-- cabin -->
+                                                            <li>
+                                                                <div class="form-grp select">
+                                                                    <label for="shortBy">Cabin</label>
+                                                                    <select id="shortBy" name="select" class="form-select" aria-label="Default select example">
+                                                                        <option value="">Economy</option>
+                                                                        <option>Premium Economy</option>
+                                                                        <option>Business Class</option>
+                                                                        <option>First Class</option>
+                                                                    </select>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                    <div class="content-bottom">
+                                                        <a href="flights-list.html" class="btn">Show Flights <i class="flaticon-flight-1"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CHECK IN TAB -->
+                                    <div class="tab-pane fade" id="check-tab-pane" role="tabpanel" aria-labelledby="check-tab" tabindex="0">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="tab-content-wrap">
+                                                    <form action="#" class="booking-form">
+                                                        <ul>
+                                                            <li>
+                                                                <div class="form-grp ticket_info">
+                                                                    <input type="text" placeholder="Ticket number">
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-grp ticket_info">
+                                                                    <input type="text" placeholder="Passenger surname" style="padding: 5px 0 5px 5px;">
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                    <div class="content-bottom">
+                                                        <a href="flights-list.html" class="btn">Show Flight<i class="flaticon-flight-1"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- cheap flights part -->
+            <section class="flight-offer-area">
+                <div class="container">
+                    <div class="row align-items-center mb-35">
+                        <div class="col-md-8">
+                            <div class="section-title">
+                                <h2 class="title">Inexpensive Flights Available from Riga, Latvia</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <!-- Riga to Istanbul -->
+                        <div class="col-lg-6 col-md-10">
+                            <div class="flight-offer-item">
+                                <div class="flight-offer-thumb">
+                                    <img src="assets/img/images/offer_img01.png" alt="">
+                                </div>
+                                <div class="flight-offer-content">
+                                    <h2 class="title">Riga to Istanbul</h2>
+                                    <span>09 Sep 2023 - 16 Jan 2024</span>
+                                    <p>Economy Class | Round Trip</p>
+                                    <h4 class="price">From € 150 to € 250</h4>
+                                </div>
+                                <div class="overlay-content">
+                                    <h2 class="title">Riga to Istanbul</h2>
+                                    <span>09 Sep 2023 - 16 Jan 2024</span>
+                                    <p>Economy from | Round Trip</p>
+                                    <h4 class="price">From € 150 to € 250</h4>
+                                    <div class="content-bottom">
+                                        <a href="#" class="btn">Check Flights</a>
+                                        <a href="#" class="discover">See other dates</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-10">
+                            <div class="row">
+                                <!-- Riga to Tashkent -->
+                                <div class="col-sm-6">
+                                    <div class="flight-offer-item offer-item-two">
+                                        <div class="flight-offer-thumb">
+                                            <img src="assets/img/images/offer_img02.png" alt="">
+                                        </div>
+                                        <div class="flight-offer-content">
+                                            <h2 class="title">Riga to Tashkent</h2>
+                                            <span>10 Aug 2023 - 31 Dec 2023</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 290 to € 360</h4>
+                                        </div>
+                                        <div class="overlay-content">
+                                            <h2 class="title">Riga to Tashkent</h2>
+                                            <span>10 Aug 2023 - 31 Dec 2023</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 290 to € 360</h4>
+                                            <div class="content-bottom">
+                                                <a href="#" class="btn">Check Flights</a>
+                                                <a href="#" class="discover">See other dates</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Riga to Rabat-->
+                                <div class="col-sm-6">
+                                    <div class="flight-offer-item offer-item-two">
+                                        <div class="flight-offer-thumb">
+                                            <img src="assets/img/images/offer_img03.png" alt="">
+                                        </div>
+                                        <div class="flight-offer-content">
+                                            <h2 class="title">Riga to Rabat</h2>
+                                            <span>03 Jul 2023 - 16 Sep 2023</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 90 to € 150</h4>
+                                        </div>
+                                        <div class="overlay-content">
+                                            <h2 class="title">Riga to Rabat</h2>
+                                            <span>03 Jul 2023 - 16 Sep 2023</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 90 to € 150</h4>
+                                            <div class="content-bottom">
+                                                <a href="#" class="btn">Check Flights</a>
+                                                <a href="#" class="discover">See other dates</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Riga to Dubai-->
+                                <div class="col-sm-6">
+                                    <div class="flight-offer-item offer-item-two">
+                                        <div class="flight-offer-thumb">
+                                            <img src="assets/img/images/offer_img04.png" alt="">
+                                        </div>
+                                        <div class="flight-offer-content">
+                                            <h2 class="title">Riga to Dubai</h2>
+                                            <span>01 Sep 2023 - 30 Jan 2024</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 150 to € 250</h4>
+                                        </div>
+                                        <div class="overlay-content">
+                                            <h2 class="title">Riga to Dubai</h2>
+                                            <span>01 Sep 2023 - 30 Jan 2024</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 150 to € 250</h4>
+                                            <div class="content-bottom">
+                                                <a href="#" class="btn">Check Flights</a>
+                                                <a href="#" class="discover">See other dates</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Riga to New York -->
+                                <div class="col-sm-6">
+                                    <div class="flight-offer-item offer-item-two">
+                                        <div class="flight-offer-thumb">
+                                            <img src="assets/img/images/offer_img05.png" alt="">
+                                        </div>
+                                        <div class="flight-offer-content">
+                                            <h2 class="title">Riga to New York</h2>
+                                            <span>01 Jun 2023 - 10 Nov 2023</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 350 to € 550</h4>
+                                        </div>
+                                        <div class="overlay-content">
+                                            <h2 class="title">Riga to New York</h2>
+                                            <span>01 Jun 2023 - 10 Nov 2023</span>
+                                            <p>Economy Class | Round Trip</p>
+                                            <h4 class="price">From € 350 to € 550</h4>
+                                            <div class="content-bottom">
+                                                <a href="#" class="btn">Check Flights</a>
+                                                <a href="#" class="discover">See other dates</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- travel news -->
+            <section class="blog-area blog-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title text-center">
+                                <span class="sub-title">Latest Updates</span>
+                                <h2 class="title">Travel Related News</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <!-- news 1 -->
+                        <div class="col-53">
+                            <div class="blog-item">
+                                <div class="blog-thumb">
+                                    <a href="#"><img src="assets/img/blog/blog_img02.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="fa-regular fa-user"></i> <a href="#">Mirabbos Mirzakhmedov</a></li>
+                                            <li><i class="fa-solid fa-calendar-days"></i>June 10, 2023</li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="title"><a href="#">Direct flights to 47 destinations from Tallinn, see summer schedule</a></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-47">
+                            <!-- news 2 -->
+                            <div class="blog-item small-item">
+                                <div class="blog-thumb">
+                                    <a href="#"><img src="assets/img/blog/blog_img01.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="fa-regular fa-user"></i> <a href="#">Mirabbos Mirzakhmedov</a></li>
+                                            <li><i class="fa-solid fa-calendar-days"></i>June 07, 2023</li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="title"><a href="#">Riga airport among the Three Best Eastern European Airports in the Prestigious Skytrax Rating</a></h2>
+                                </div>
+                            </div>
+
+                            <!-- news 3 -->
+                            <div class="blog-item small-item">
+                                <div class="blog-thumb">
+                                    <a href="#"><img src="assets/img/blog/blog_img03.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="fa-regular fa-user"></i> <a href="#">Mirabbos Mirzakhmedov</a></li>
+                                            <li><i class="fa-solid fa-calendar-days"></i>June 05, 2023</li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="title"><a href="#">airBaltic Participates in Paris Blockchain Week 2023</a></h2>
+                                </div>
+                            </div>
+
+                            <!-- news 4 -->
+                            <div class="blog-item small-item">
+                                <div class="blog-thumb">
+                                    <a href="#"><img src="assets/img/blog/blog_img04.jpg" alt=""></a>
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <ul>
+                                            <li><i class="fa-regular fa-user"></i> <a href="#">Mirabbos Mirzakhmedov</a></li>
+                                            <li><i class="fa-solid fa-calendar-days"></i>June 01, 2023</li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="title"><a href="#">Coronavirus: Which countries have travel bans?</a></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <!-- footer part -->
+        <footer>
+            <div class="footer-area footer-bg">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row"
+                             style="display:  flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center"
+                        >
+                            <!--Logo and slogan-->
+                            <div class="col-xl-2">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    </div>
+                                    <div class="footer-content">
+                                        <p>Fly with ease, book with confidence</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--contact info-->
+                            <div class="col-xl-2">
+                                <div class="footer-widget">
+                                    <div class="fw-title">
+                                        <h4 class="title">Contacts</h4>
+                                    </div>
+                                    <div class="footer-contact">
+                                        <p>Mirabbos Mirzakhmedov</p>
+                                        <h2 class="title"><a href="tel:37120077777">+371 200 777 77</a></h2>
+                                        <a href="mailto:info@skylinkers.com#">info@skylinkers.com</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- university logo-->
+                            <div class="col-xl-2">
+                                <div class="footer-widget">
+                                  <div class="footer-logo">
+                                    <img src="assets/img/logo/rtu_logo.png" alt="" class="logo-img">
+                                  </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!--javascript code-->
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

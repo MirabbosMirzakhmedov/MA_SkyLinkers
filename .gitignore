@@ -1,0 +1,19 @@
+# Ignore .git and .idea folders
+.git
+.idea
+
+# Ignore CSS and JS files in assets folder
+/assets/css/bootstrap-datepicker.min.css
+/assets/css/bootstrap.min.css
+/assets/css/flaticon.css
+/assets/css/fontawesome-all.min.css
+/assets/css/jquery-ui.css
+/assets/js/jquery-3.6.0.min.js
+/assets/js/bootstrap.min.js
+/assets/js/bootstrap-datepicker.min.js
+/assets/js/slick.min.js
+/assets/js/vendor/jquery-3.6.0.min.js
+
+
+# Ignore fonts folder in assets folder
+/assets/fonts

@@ -1,0 +1,524 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <title>SkyLinkers</title>
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+        <!-- CSS files -->
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body class="white-background">
+
+
+        <!-- header-area -->
+        <header>
+            <div id="sticky-header" class="menu-area transparent-header">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="menu-wrap">
+                                <nav class="menu-nav">
+                                    <div class="logo"><a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a></div>
+                                    <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                        <ul class="navigation">
+                                        </ul>
+                                    </div>
+                                    <div class="header-action d-none d-md-block">
+                                        <ul>
+                                            <li class="country"><a href="#">EUR<img src="assets/img/icon/united-states.png" alt=""></a></li>
+                                            <li class="header-btn"><a href="#" class="btn">Log In</a></li>
+                                            <li class="header-btn sign-in"><a href="#" class="btn">Sign Up</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header-area-end -->
+
+
+        <!-- main-area -->
+        <main>
+
+            <!-- background -->
+            <section class="breadcrumb-area breadcrumb-bg">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="breadcrumb-content text-center">
+                                <h2 class="title">Flights List</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Flights List</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- booking-list-area -->
+            <div class="booking-list-area">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <!-- left part : FILTERS -->
+                        <div class="col-27 order-2 order-xl-0">
+                            <aside class="booking-sidebar">
+                                <div class="widget filters">
+                                    <h2 class="title">filters</h2>
+                                    <div class="filters-wrap">
+                                        <h2 class="widget-title">Price Range</h2>
+                                        <div class="price_filter">
+                                            <div id="slider-range"></div>
+                                            <div class="price_slider_amount">
+                                                <span>Price :</span>
+                                                <input type="text" id="amount" name="price" placeholder="Enter Amount" />
+                                                <input type="submit" class="btn" value="Filter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget">
+                                    <h2 class="widget-title">Departure Time</h2>
+                                    <ul class="departure-wrap">
+                                        <li><a href="#"><i class="flaticon-sunrise"></i>00:00 - 05:59</a></li>
+                                        <li><a href="#"><i class="flaticon-sunny"></i>06:00 - 11:59</a></li>
+                                        <li><a href="#"><i class="flaticon-sunset"></i>12:00 - 17:59</a></li>
+                                        <li><a href="#"><i class="flaticon-crescent-moon"></i>18:00 - 23:59</a></li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <h2 class="widget-title">Number of Stops</h2>
+                                    <form action="#" class="flight-stops">
+                                        <label for="stopNumber"><i class="flaticon-flight"></i></label>
+                                        <select id="stopNumber" name="select" class="form-select" aria-label="Default select example">
+                                            <option value="">No limit</option>
+                                            <option>Non stop only</option>
+                                            <option>Up to 1 stop</option>
+                                            <option>Up to 2 stop</option>
+                                            <option>Up to 3 stop</option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <div class="widget">
+                                    <h2 class="widget-title">Airlines</h2>
+                                    <ul class="airlines-cat-list">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catOne">
+                                                <label class="form-check-label" for="catOne">Turkish Airways</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catTwo">
+                                                <label class="form-check-label" for="catTwo">Qatar Airways</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catThree">
+                                                <label class="form-check-label" for="catThree">Singapore Airlines</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catFour">
+                                                <label class="form-check-label" for="catFour">Lufthansa</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catFive">
+                                                <label class="form-check-label" for="catFive">Emirates</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="widget">
+                                    <h2 class="widget-title">Airlines</h2>
+                                    <ul class="airlines-cat-list">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catOne">
+                                                <label class="form-check-label" for="catOne">No bags</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catTwo">
+                                                <label class="form-check-label" for="catTwo">1 bag</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="catThree">
+                                                <label class="form-check-label" for="catThree">2 bags</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <!-- center : FLIGHT OPTIONS -->
+                        <div class="col-73">
+
+                            <!-- Turkish airlines-->
+                            <div class="booking-list-item">
+                                <div class="booking-list-item-inner">
+                                    <div class="booking-list-top">
+                                        <div class="flight-airway">
+                                            <div class="flight-logo">
+                                                <img src="assets/img/icon/tk_logo.png" alt="">
+                                            </div>
+                                            <div class="flight-logo">
+                                                <h5 class="title">Turkish Airlines</h5>
+                                            </div>
+                                        </div>
+                                        <ul class="flight-info">
+                                            <li><b>Departure</b><br>Riga<br><br>Friday,<span>Jun 16<br>12:55 PM</span></li>
+                                            <li><b>Flight time</b><br><span>22h 50m<br><br>1 stop<br>9 hours</span>Istanbul</li>
+                                            <li><b>Arrival</b><br>Tashkent<br><br>Saturday,<span>Jun 17<br>10:15 AM</span></li>
+                                            <li class="flight-price">
+                                                <h4 class="title">€ 820,60</h4>
+                                                <a href="booking-details.html" class="btn">Select <i class="flaticon-flight-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="booking-list-bottom">
+                                        <ul>
+                                            <li class="detail"><i class="fa-solid fa-angle-down"></i>Flight Details</li>
+                                            <li>Final price per person (incl. taxes & fees)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flight-detail-wrap">
+                                    <div class="flight-date">
+                                        <ul>
+                                            <li><b>Departure:</b> Friday, Jun 16</li>
+                                            <li><b>Flight time:</b> 22h 50m</li>
+                                            <li><b>Arrival:</b> Friday, Jun 17</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flight-detail-right">
+                                        <h4 class="title"><b>RIX</b> - Riga International Airport, Latvia</h4>
+                                        <div class="flight-detail-info">
+                                            <img src="assets/img/icon/tk_logo.png" alt="">
+                                            <ul>
+                                                <li><b>Airline: </b>Turkish Airlines</li>
+                                                <li><b>Flight number: </b>TK 1441</li>
+                                                <li><b>Aircraft: </b>Boeing 777-300</li>
+                                                <li><br><b>Bags: </b>2 pieces / 23 KG</li>
+                                                <li><b>Layover 1: </b>IST Istanbul, Turkey - 9 Hours</li>
+                                                <li><b>Booking class: </b>Economy / L</li>
+                                                <li><b>Refundable: </b>No</li>
+
+                                            </ul>
+                                        </div>
+                                        <h4 class="title title-two"><b>TAS</b> - Islam Karimov International Airport, Tashkent</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Qatar Airways -->
+                            <div class="booking-list-item">
+                                <div class="booking-list-item-inner">
+                                    <div class="booking-list-top">
+                                        <div class="flight-airway">
+                                            <div class="flight-logo">
+                                                <img src="assets/img/icon/qr_logo.jpg" alt="">
+                                            </div>
+                                            <div class="flight-logo">
+                                                <h5 class="title">Qatar Airways</h5>
+                                            </div>
+                                        </div>
+                                        <ul class="flight-info">
+                                            <li><b>Departure</b><br>Riga<br><br>Thursday,<span>Jun 15<br>18:20 PM</span></li>
+                                            <li><b>Flight time</b><br><span>20h 10m<br><br>1 stop<br>6 hours</span>Doha</li>
+                                            <li><b>Arrival</b><br>Tashkent<br><br>Friday,<span>Jun 16<br>8:15 AM</span></li>
+                                            <li class="flight-price">
+                                                <h4 class="title">€ 1050,80</h4>
+                                                <a href="booking-details.html" class="btn">Select <i class="flaticon-flight-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="booking-list-bottom">
+                                        <ul>
+                                            <li class="detail"><i class="fa-solid fa-angle-down"></i>Flight Details</li>
+                                            <li>Final price per person (incl. taxes & fees)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flight-detail-wrap">
+                                    <div class="flight-date">
+                                        <ul>
+                                            <li><b>Departure:</b> Thursday, Jun 15</li>
+                                            <li><b>Flight time:</b> 20h 10m</li>
+                                            <li><b>Arrival:</b> Friday, Jun 16</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flight-detail-right">
+                                        <h4 class="title"><b>RIX</b> - Riga International Airport, Latvia</h4>
+                                        <div class="flight-detail-info">
+                                            <img src="assets/img/icon/qr_logo.jpg" alt="">
+                                            <ul>
+                                                <li><b>Airline: </b>Qatar Airways</li>
+                                                <li><b>Flight number: </b>QR 666</li>
+                                                <li><b>Aircraft: </b>Boeing 777-300</li>
+                                                <li><br><b>Bags: </b>2 pieces / 23 KG</li>
+                                                <li><b>Layover 1: </b>DOH Doha, Qatar - 6 Hours</li>
+                                                <li><b>Booking class: </b>Economy / K</li>
+                                                <li><b>Refundable: </b>Yes</li>
+
+                                            </ul>
+                                        </div>
+                                        <h4 class="title title-two"><b>TAS</b> - Islam Karimov International Airport, Tashkent</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Singapore Airlines-->
+                            <div class="booking-list-item">
+                                <div class="booking-list-item-inner">
+                                    <div class="booking-list-top">
+                                        <div class="flight-airway">
+                                            <div class="flight-logo">
+                                                <img src="assets/img/icon/sq_logo.jpg" alt="">
+                                            </div>
+                                            <div class="flight-logo">
+                                                <h5 class="title">Singapore Airlines</h5>
+                                            </div>
+                                        </div>
+                                        <ul class="flight-info">
+                                            <li><b>Departure</b><br>Riga<br><br>Friday,<span>Jun 16<br>8:00 PM</span></li>
+                                            <li><b>Flight time</b><br><span>25h 20m<br><br>1 stop<br>3 hours</span>Singapore</li>
+                                            <li><b>Arrival</b><br>Tashkent<br><br>Saturday,<span>Jun 17<br>6:15 PM</span></li>
+                                            <li class="flight-price">
+                                                <h4 class="title">€ 965,54</h4>
+                                                <a href="booking-details.html" class="btn">Select <i class="flaticon-flight-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="booking-list-bottom">
+                                        <ul>
+                                            <li class="detail"><i class="fa-solid fa-angle-down"></i>Flight Details</li>
+                                            <li>Final price per person (incl. taxes & fees)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flight-detail-wrap">
+                                    <div class="flight-date">
+                                        <ul>
+                                            <li><b>Departure:</b> Friday, Jun 16</li>
+                                            <li><b>Flight time:</b> 25h 20m</li>
+                                            <li><b>Arrival:</b> Friday, Jun 17</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flight-detail-right">
+                                        <h4 class="title"><b>RIX</b> - Riga International Airport, Latvia</h4>
+                                        <div class="flight-detail-info">
+                                            <img src="assets/img/icon/sq_logo.jpg" alt="">
+                                            <ul>
+                                                <li><b>Airline: </b>Singapore Airlines</li>
+                                                <li><b>Flight number: </b>SQ 450</li>
+                                                <li><b>Aircraft: </b>Boeing 777-300</li>
+                                                <li><br><b>Bags: </b>2 pieces / 23 KG</li>
+                                                <li><b>Layover 1: </b>SIN Singapore, Singapore - 5 Hours</li>
+                                                <li><b>Booking class: </b>Economy / W</li>
+                                                <li><b>Refundable: </b>No</li>
+
+                                            </ul>
+                                        </div>
+                                        <h4 class="title title-two"><b>TAS</b> - Islam Karimov International Airport, Tashkent</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Lufthansa -->
+                            <div class="booking-list-item">
+                                <div class="booking-list-item-inner">
+                                    <div class="booking-list-top">
+                                        <div class="flight-airway">
+                                            <div class="flight-logo">
+                                                <img src="assets/img/icon/lh_logo.jpg" alt="">
+                                            </div>
+                                            <div class="flight-logo">
+                                                <h5 class="title">Lufthansa</h5>
+                                            </div>
+                                        </div>
+                                        <ul class="flight-info">
+                                            <li><b>Departure</b><br>Riga<br><br>Friday,<span>Jun 16<br>9:55 PM</span></li>
+                                            <li><b>Flight time</b><br><span>18h 50m<br><br>1 stop<br>4 hours</span>Frankfurt</li>
+                                            <li><b>Arrival</b><br>Tashkent<br><br>Saturday,<span>Jun 17<br>7:10 PM</span></li>
+                                            <li class="flight-price">
+                                                <h4 class="title">€ 980,60</h4>
+                                                <a href="booking-details.html" class="btn">Select <i class="flaticon-flight-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="booking-list-bottom">
+                                        <ul>
+                                            <li class="detail"><i class="fa-solid fa-angle-down"></i>Flight Details</li>
+                                            <li>Final price per person (incl. taxes & fees)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flight-detail-wrap">
+                                    <div class="flight-date">
+                                        <ul>
+                                            <li><b>Departure:</b> Friday, Jun 16</li>
+                                            <li><b>Flight time:</b> 18h 50m</li>
+                                            <li><b>Arrival:</b> Friday, Jun 17</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flight-detail-right">
+                                        <h4 class="title"><b>RIX</b> - Riga International Airport, Latvia</h4>
+                                        <div class="flight-detail-info">
+                                            <img src="assets/img/icon/lh_logo.jpg" alt="">
+                                            <ul>
+                                                <li><b>Airline: </b>Lufthansa</li>
+                                                <li><b>Flight number: </b>LH 8220</li>
+                                                <li><b>Aircraft: </b>Boeing 777-300</li>
+                                                <li><br><b>Bags: </b>2 pieces / 23 KG</li>
+                                                <li><b>Layover 1: </b>FRA Frankfurt, Germany - 2 Hours</li>
+                                                <li><b>Booking class: </b>Economy / L</li>
+                                                <li><b>Refundable: </b>No</li>
+
+                                            </ul>
+                                        </div>
+                                        <h4 class="title title-two"><b>TAS</b> - Islam Karimov International Airport, Tashkent</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Emirates -->
+                            <div class="booking-list-item">
+                                <div class="booking-list-item-inner">
+                                    <div class="booking-list-top">
+                                        <div class="flight-airway">
+                                            <div class="flight-logo">
+                                                <img src="assets/img/icon/ek_logo.jpg" alt="">
+                                            </div>
+                                            <div class="flight-logo">
+                                                <h5 class="title">Emirates</h5>
+                                            </div>
+                                        </div>
+                                        <ul class="flight-info">
+                                            <li><b>Departure</b><br>Riga<br><br>Friday,<span>Jun 16<br>3:55 PM</span></li>
+                                            <li><b>Flight time</b><br><span>12h 50m<br><br>1 stop<br>3 hours</span>Dubai</li>
+                                            <li><b>Arrival</b><br>Tashkent<br><br>Saturday,<span>Jun 17<br>10:15 AM</span></li>
+                                            <li class="flight-price">
+                                                <h4 class="title">€ 890,80</h4>
+                                                <a href="booking-details.html" class="btn">Select <i class="flaticon-flight-1"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="booking-list-bottom">
+                                        <ul>
+                                            <li class="detail"><i class="fa-solid fa-angle-down"></i>Flight Details</li>
+                                            <li>Final price per person (incl. taxes & fees)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flight-detail-wrap">
+                                    <div class="flight-date">
+                                        <ul>
+                                            <li><b>Departure:</b> Friday, Jun 16</li>
+                                            <li><b>Flight time:</b> 12h 50m</li>
+                                            <li><b>Arrival:</b> Friday, Jun 17</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flight-detail-right">
+                                        <h4 class="title"><b>RIX</b> - Riga International Airport, Latvia</h4>
+                                        <div class="flight-detail-info">
+                                            <img src="assets/img/icon/ek_logo.jpg" alt="">
+                                            <ul>
+                                                <li><b>Airline: </b>Emirates</li>
+                                                <li><b>Flight number: </b>EK 450</li>
+                                                <li><b>Aircraft: </b>Boeing 777-300</li>
+                                                <li><br><b>Bags: </b>2 pieces / 23 KG</li>
+                                                <li><b>Layover 1: </b>DXB Dubai, UAE - 3 Hours</li>
+                                                <li><b>Booking class: </b>Economy / L</li>
+                                                <li><b>Refundable: </b>No</li>
+
+                                            </ul>
+                                        </div>
+                                        <h4 class="title title-two"><b>TAS</b> - Islam Karimov International Airport, Tashkent</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <!-- main-area-end -->
+
+        <!-- footer-area -->
+        <footer>
+            <div class="footer-area footer-bg">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row" style="display:  flex; justify-content: center; align-items: center; text-align: center">
+                            <div class="col-xl-2">
+                                <div class="footer-widget">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    </div>
+                                    <div class="footer-content">
+                                        <p>Fly with ease, book with confidence</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="footer-widget">
+                                    <div class="fw-title">
+                                        <h4 class="title">Contacts</h4>
+                                    </div>
+                                    <div class="footer-contact">
+                                        <p>Mirabbos Mirzakhmedov</p>
+                                        <h2 class="title"><a href="tel:37120077777">+371 200 777 77</a></h2>
+                                        <a href="mailto:info@skylinkers.com#">info@skylinkers.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="footer-widget">
+                                  <div class="footer-logo">
+                                    <img src="assets/img/logo/rtu_logo.png" alt="">
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+
+
+        <!--javascript code-->
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-datepicker.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
